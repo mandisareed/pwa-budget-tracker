@@ -46,6 +46,17 @@
   <script src="index.js"></script>
   <script src="db.js"></script>
   <script>
+
+//uncomment the code below to clear user dataand start fresh programically
+//until there is a clear data function available client-side to the user
+  
+//     if ('serviceWorker' in navigator) {
+//   caches.keys().then(function(cacheNames) {
+//     cacheNames.forEach(function(cacheName) {
+//       caches.delete(cacheName);
+//     });
+//   });
+// }
     if ("serviceWorker" in navigator) {
       window.addEventListener("load", () => {
         navigator.serviceWorker.register("service-worker.js")

@@ -1,7 +1,7 @@
 let db;
 
 // create a new db request for a "budget" database. this includes the version number (1, in this case)
-const request = indexedDB.open("budget", 2);
+const request = indexedDB.open("budget", 1);
 
 request.onupgradeneeded = function(event) {
     // create object store called "pending" and set autoIncrement to true (meaning the primary key will auto increment)
